@@ -11,9 +11,9 @@ from email.mime.text import MIMEText
 URL = "http://cercind.gov.in/Current_reg.html"  # Use HTTP (important fix)
 DATA_FILE = "cerc_updates.json"
 
-EMAIL_SENDER = "abhishekag.iitr09@gmail.com"
-EMAIL_PASSWORD = "Abhishek@123"
-EMAIL_RECEIVER = "abhishek.agarwal@feplglobal.com"
+EMAIL_SENDER = os.environ.get("EMAIL_SENDER")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
+EMAIL_RECEIVER = os.environ.get("EMAIL_RECEIVER")
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
